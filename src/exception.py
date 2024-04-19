@@ -1,5 +1,6 @@
 import sys 
 import logging
+from src.logger import logging  # to save exception in the logger file 
 # # whenever an error occur than this will show out custom message 
 # # this fucntion will tell us that at which file at whilech line exception is occuroing
 def error_message_detail(error, error_detail: sys):
@@ -17,9 +18,9 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_message
 
-# if __name__ == "__main__":
-#     try:
-#         a = 1 / 0
-#     except Exception as e:
-#         logging.info("Divide by zero error") 
-#         raise CustomException(e, sys)
+if __name__ == "__main__":
+    try:
+        a = 1 / 0
+    except Exception as e:
+        logging.info("Divide by zero error") 
+        raise CustomException(e, sys)
