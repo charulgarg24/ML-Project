@@ -14,9 +14,9 @@ from src.components.model_trainer import ModelTrainerconfig
 from src.components.model_trainer import ModelTrainer
 @dataclass
 class DataIngestionConfig:
-    train_data_path: str=os.path.join('artificats',"train.csv")   # it will save our trian.csv filet o this this folder
-    test_data_path: str=os.path.join('artificats',"test.csv") 
-    raw_data_path: str=os.path.join('artificats',"data.csv") 
+    train_data_path: str=os.path.join('artifacts',"train.csv")   # it will save our trian.csv filet o this this folder
+    test_data_path: str=os.path.join('artifacts',"test.csv") 
+    raw_data_path: str=os.path.join('artifacts',"data.csv") 
     # all these are the inputt hat weare giving to data ingestion part now they were w eaveto save these data
 
 class DataIngestion:
