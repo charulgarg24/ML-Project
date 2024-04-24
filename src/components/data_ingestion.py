@@ -1,4 +1,4 @@
-## in this we will have code regarding reading the data
+## in this we will have code regarding reading the data (1st part)
 import sys
 import os
 from src.exception import CustomException

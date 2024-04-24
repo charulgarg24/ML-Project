@@ -49,5 +49,10 @@ def evaluate_models(X_train, y_train,X_test,y_test,models,param):
 
     except Exception as e:
         raise CustomException(e, sys)
-
-
+# it is responsible for ;aoding the pickle file we are writing it in utils file bcz it is common fucntionairy 
+def load_object(file_path):  # it will open the file path in read byte mode and it is loading the pickel file using the dill thts why we import dill
+    try:
+        with open(file_path,"rb") as file_obj:
+            return dill.load(file_obj)
+    except Exception as e:
+        raise CustomException(e,sys)
